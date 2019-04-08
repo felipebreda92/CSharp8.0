@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchExpressions", "Switch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursivePatterns", "RecursivePatterns\RecursivePatterns.csproj", "{5E2A14D5-4DEF-49CB-97D9-E6739932C1AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingDeclarations", "UsingDeclarations\UsingDeclarations.csproj", "{0EDE6DD9-E64F-41D5-8D5C-1201A35EBE4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingDeclarations", "UsingDeclarations\UsingDeclarations.csproj", "{0EDE6DD9-E64F-41D5-8D5C-1201A35EBE4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TupplePatterns", "TupplePatterns\TupplePatterns.csproj", "{198E5556-DFB9-4AE3-9016-6DCB2C7AA76A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0EDE6DD9-E64F-41D5-8D5C-1201A35EBE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EDE6DD9-E64F-41D5-8D5C-1201A35EBE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EDE6DD9-E64F-41D5-8D5C-1201A35EBE4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{198E5556-DFB9-4AE3-9016-6DCB2C7AA76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{198E5556-DFB9-4AE3-9016-6DCB2C7AA76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{198E5556-DFB9-4AE3-9016-6DCB2C7AA76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{198E5556-DFB9-4AE3-9016-6DCB2C7AA76A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
