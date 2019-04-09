@@ -15,11 +15,16 @@ namespace UsingDeclarations
             try
             {
                 using var md5 = MD5.Create();
-                var hash = GetMd5Hash(md5, "1" + "d4205f94d67bd6deb40f9b5490196e2673aa4da7" + "38559f0dd9819d43e0ea5ad015a932d9");
+
+                var ts = "1";
+                var privateKey = "d4205f94d67bd6deb40f9b5490196e2673aa4da7";
+                var publicKey = "38559f0dd9819d43e0ea5ad015a932d9";
+                var hash = GetMd5Hash(md5, ts + privateKey + publicKey);
+
 
                 var url = "http://gateway.marvel.com/v1/public/comics?";
-                url += "ts=1";
-                url += "&apikey=38559f0dd9819d43e0ea5ad015a932d9";
+                url += $"ts={ts}";
+                url += $"&apikey={publicKey}";
                 url += $"&hash={hash}";
 
                 var request = WebRequest.Create(url);
@@ -31,10 +36,10 @@ namespace UsingDeclarations
                 using Stream dataStream = response.GetResponseStream();
                 using StreamReader reader = new StreamReader(dataStream);
 
-                //var serverResponse = JsonConvert.DeserializeObject<RootObject>(reader.ReadToEnd());
-                var serverResponse = reader.ReadToEnd();
+                var serverResponse = JsonConvert.DeserializeObject<RootObject>(reader.ReadToEnd());
+                //var serverResponse = reader.ReadToEnd();
 
-                Console.WriteLine(serverResponse);
+                Console.WriteLine(serverResponse.attributionHTML);
             }
             catch (Exception e)
             {
